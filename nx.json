@@ -36,6 +36,20 @@
     "my-app-e2e": {
       "tags": [],
       "implicitDependencies": ["my-app"]
+    },
+    "suprematism-my-other-app": {
+      "tags": []
+    },
+    "suprematism-my-other-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["suprematism-my-other-app"]
+    },
+    "suprematism-my-app": {
+      "tags": []
+    },
+    "suprematism-my-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["suprematism-my-app"]
     }
   }
 }

@@ -233,6 +233,251 @@
           }
         }
       }
+    },
+    "suprematism-my-other-app": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/suprematism/my-other-app",
+      "sourceRoot": "apps/suprematism/my-other-app/src",
+      "prefix": "testjest",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/suprematism/my-other-app",
+            "index": "apps/suprematism/my-other-app/src/index.html",
+            "main": "apps/suprematism/my-other-app/src/main.ts",
+            "polyfills": "apps/suprematism/my-other-app/src/polyfills.ts",
+            "tsConfig": "apps/suprematism/my-other-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/suprematism/my-other-app/src/favicon.ico",
+              "apps/suprematism/my-other-app/src/assets"
+            ],
+            "styles": ["apps/suprematism/my-other-app/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/suprematism/my-other-app/src/environments/environment.ts",
+                  "with": "apps/suprematism/my-other-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "suprematism-my-other-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "suprematism-my-other-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "suprematism-my-other-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/suprematism/my-other-app/tsconfig.app.json",
+              "apps/suprematism/my-other-app/tsconfig.spec.json",
+              "apps/suprematism/my-other-app/tsconfig.editor.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/suprematism/my-other-app/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/suprematism/my-other-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "suprematism-my-other-app-e2e": {
+      "root": "apps/suprematism/my-other-app-e2e",
+      "sourceRoot": "apps/suprematism/my-other-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/suprematism/my-other-app-e2e/cypress.json",
+            "tsConfig": "apps/suprematism/my-other-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "suprematism-my-other-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "suprematism-my-other-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/suprematism/my-other-app-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/suprematism/my-other-app-e2e/**/*"
+            ]
+          }
+        }
+      }
+    },
+    "suprematism-my-app": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/suprematism/my-app",
+      "sourceRoot": "apps/suprematism/my-app/src",
+      "prefix": "testjest",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/suprematism/my-app",
+            "index": "apps/suprematism/my-app/src/index.html",
+            "main": "apps/suprematism/my-app/src/main.ts",
+            "polyfills": "apps/suprematism/my-app/src/polyfills.ts",
+            "tsConfig": "apps/suprematism/my-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/suprematism/my-app/src/favicon.ico",
+              "apps/suprematism/my-app/src/assets"
+            ],
+            "styles": ["apps/suprematism/my-app/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/suprematism/my-app/src/environments/environment.ts",
+                  "with": "apps/suprematism/my-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "suprematism-my-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "suprematism-my-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "suprematism-my-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/suprematism/my-app/tsconfig.app.json",
+              "apps/suprematism/my-app/tsconfig.spec.json",
+              "apps/suprematism/my-app/tsconfig.editor.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/suprematism/my-app/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/suprematism/my-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "suprematism-my-app-e2e": {
+      "root": "apps/suprematism/my-app-e2e",
+      "sourceRoot": "apps/suprematism/my-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/suprematism/my-app-e2e/cypress.json",
+            "tsConfig": "apps/suprematism/my-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "suprematism-my-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "suprematism-my-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/suprematism/my-app-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/suprematism/my-app-e2e/**/*"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
