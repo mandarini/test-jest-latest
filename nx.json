@@ -29,6 +29,13 @@
     "test-app-e2e": {
       "tags": [],
       "implicitDependencies": ["test-app"]
+    },
+    "my-app": {
+      "tags": []
+    },
+    "my-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["my-app"]
     }
   }
 }
